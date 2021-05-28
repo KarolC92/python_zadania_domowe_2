@@ -16,10 +16,10 @@ def przytnij(data: list, start: int, stop: int) -> list:
     """
     Funkcja zwracająca wycinek listy: data
 
-    :param data: List, z której zamierzamy uzyskać konkretny wycinek
+    :param data: Lista, z której zamierzamy uzyskać konkretny wycinek
     :param start: Indeks, pod którym znajduje się element, powyżej którego rozpoczynamy wycinanie listy
     :param stop: Indeks, pod którym znajduje się ostatni element z listy przypisany do naszego "wycinka"
-    :return: Wycinek: data[start + 1: stop]
+    :return: "Wycinek": data[start + 1: stop]
     """
     a = list(filter(lambda x: x > start, data))
     b = list(filter(lambda x: x <= stop, a))
