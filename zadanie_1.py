@@ -14,14 +14,14 @@
 
 # Dla wybranych napisz też interaktywne programy, które pytają użytkownika o dane i wypisują wynik.
 
-def stopy_na_metry(x: float) -> float:
+def stopy_na_metry(x: float):
     return f'{x} ft = {(x * 0.3048):.4f} m.'
 
 
 print(stopy_na_metry(9))
 
 
-def max_liczba(a: int, b: int) -> str:
+def max_liczba(a: int, b: int):
     if a > b:
         return f'Większa z pary: ({a}, {b}) to: {a}'
     elif b > a:
@@ -33,7 +33,7 @@ def max_liczba(a: int, b: int) -> str:
 print(max_liczba(4, 8))
 
 
-def srednia(a, b):
+def srednia(a: int, b: int):
     return f'Średnia liczb ({a}, {b}) = {((a + b) / 2):.2f}'
 
 
@@ -42,21 +42,21 @@ print(srednia(2, 9))
 import math
 
 
-def pole_kola(r):
+def pole_kola(r: float):
     return f'Pola koła o promieniu {r} = {(math.pi * r ** 2):.2f} j^2'
 
 
 print(pole_kola(78))
 
 
-def bmi(masa: float, wzrost: float) -> str:
+def bmi(masa: float, wzrost: float):
     return f'Bmi dla wzrostu {wzrost} cm i masie ciała {masa} kg wynosi: {(masa / (wzrost / 100) ** 2):.2f}'
 
 
 print(bmi(72, 178))
 
 
-def pola_trojkata(a, b, c):
+def pola_trojkata(a: float, b: float, c: float):
     try:
         wynik = round(math.sqrt((a + b + c) * (a + b - c) * (a - b + c) * (-a + b + c)) / 4, 2)
         if wynik > 0:
@@ -70,14 +70,14 @@ def pola_trojkata(a, b, c):
 print(pola_trojkata(1, 4, 4))
 
 
-def kilometry_na_mile(a):
+def kilometry_na_mile(a: float):
     return f'{a} km = {a * 0.621371192:.2f} mili.'
 
 
 print(kilometry_na_mile(5))
 
 
-def mile_na_kilometry(a):
+def mile_na_kilometry(a: float):
     return f'{a} mil = {a * 1.609344:.2f} km.'
 
 
