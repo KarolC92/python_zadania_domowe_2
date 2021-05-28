@@ -14,7 +14,7 @@
 
 # Dla wybranych napisz też interaktywne programy, które pytają użytkownika o dane i wypisują wynik.
 
-def stopy_na_metry(x):
+def stopy_na_metry(x: float) -> float:
     return f'{x} ft = {(x * 0.3048):.4f} m.'
 
 
@@ -23,9 +23,9 @@ print(stopy_na_metry(9))
 
 def max_liczba(a: int, b: int) -> str:
     if a > b:
-        return f'Większa liczba z podanej pary liczb ({a}, {b}) to: {a}'
+        return f'Większa z pary: ({a}, {b}) to: {a}'
     elif b > a:
-        return f'Większa liczba z podanej pary liczb ({a}, {b}) to: {b}'
+        return f'Większa z pary: ({a}, {b}) to: {b}'
     else:
         return 'Obie liczby są równe'
 
@@ -43,14 +43,14 @@ import math
 
 
 def pole_kola(r):
-    return f'Pola koła o podanym promieniu wynosi: {(math.pi * r ** 2):.2f} j^2'
+    return f'Pola koła o promieniu {r} = {(math.pi * r ** 2):.2f} j^2'
 
 
-print(pole_kola(1))
+print(pole_kola(78))
 
 
 def bmi(masa: float, wzrost: float) -> str:
-    return f'Bmi dla wzrostu {wzrost} cm i masy ciała {masa} kg wynosi: {(masa / (wzrost / 100) ** 2):.2f}'
+    return f'Bmi dla wzrostu {wzrost} cm i masie ciała {masa} kg wynosi: {(masa / (wzrost / 100) ** 2):.2f}'
 
 
 print(bmi(72, 178))
@@ -65,6 +65,7 @@ def pola_trojkata(a, b, c):
             return f'Z podanych boków nie można utworzyć trójkąta!'
     except ValueError:
         return f'Z podanych boków nie można utworzyć trójkąta!'
+
 
 print(pola_trojkata(1, 4, 4))
 
