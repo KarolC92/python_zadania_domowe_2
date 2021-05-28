@@ -21,9 +21,8 @@ def przytnij(data: list, start: int, stop: int) -> list:
     :param stop: Największa wartość, która może zostać przypisana do wycinka z listy początkowej
     :return: Wycinek listy, gdzie: min(wycinek) > start, max(wycinek) = stop
     """
-    a = list(filter(lambda x: x > start, data))
-    b = list(filter(lambda x: x <= stop, a))
-    return b
+    a = list(filter(lambda x: start < x <= stop, data))
+    return a
 
 print(przytnij([1, 2, 3, 4, 5, 6, 7], 3, 6))
 
