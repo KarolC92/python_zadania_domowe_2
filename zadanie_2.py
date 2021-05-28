@@ -26,15 +26,21 @@ miesiace = {'styczeń': 1,
             }
 
 
-def dni_miesiaca(a, r):
+def dni_miesiaca(a: str, r: int):
+    """
+    Funkcja pokazująca liczbę dni w danym miesiącu
+    :param a: Miesiąc
+    :param r: Rok
+    :return: Liczba dni występujących w danym miesiącu na dany rok
+    """
     try:
         return monthrange(int(r), miesiace[a])[1]
     except KeyError:
-        return f'Niewłaściwy miesiąc'
+        return f'Niepoprawne dane!'
 
 
 rok = 2021
-miesiac = input("Podaj nazwę miesiąca: ")
+miesiac = input("Podaj nazwę miesiąca: ").lower()
 
 if miesiac in miesiace:
     if miesiac == 'luty':
